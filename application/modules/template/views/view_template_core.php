@@ -148,7 +148,7 @@
                 <!--Brand logo & name-->
                 <!--================================-->
                 <div class="navbar-header">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="#0" class="navbar-brand">
                         <img src="<?php echo base_url(); ?>assets/login/pages/img/login/logo7.png" alt="Nifty Logo" class="brand-icon">
                         <div class="brand-title">
                             <span class="brand-text">Gethuk Lindri</span>

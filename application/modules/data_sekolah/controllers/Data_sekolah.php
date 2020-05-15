@@ -8,7 +8,6 @@ class Data_sekolah extends MX_Controller {
 		parent::__construct();
 		// model
 		 $this->load->model('m_data_sekolah');
-		 $this->load->model('login/m_session');
 	}
 
 	
