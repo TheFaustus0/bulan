@@ -5,7 +5,7 @@ class M_data_guru extends CI_Model {
 
 	function tampil()
 	{
-		return $this->db->get('data_guru')->result();
+		return $this->db->get('bulan')->result();
 	}
 
 	function tambah(){
