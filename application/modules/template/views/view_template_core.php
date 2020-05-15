@@ -531,7 +531,7 @@
                                     <li class="active-sub">
                                         <a href="<?php echo base_url('data_sekolah'); ?>">
                                             <i class="fa fa-list"></i>
-                                            <span class="menu-title">Data Sekolah</span>
+                                            <span class="menu-title">Data Pelangan</span>
                                             <i class="arrow"></i>
                                         </a>
 
