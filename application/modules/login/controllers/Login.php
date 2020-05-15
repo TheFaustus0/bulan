@@ -45,11 +45,16 @@ class Login extends MX_Controller
                     redirect('login');
                 }
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Wrong Password </div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Wrong Username </div>');
                 redirect('login');
 
             }
         }
 
+    }
+    public function out()
+    {
+        $this->session->sess_destroy();
+        redirect('login');
     }
 }

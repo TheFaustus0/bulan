@@ -1,44 +1,47 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Data_guru extends MX_Controller {
+class Data_guru extends MX_Controller
+{
 
-	function __construct()
-	{
-		parent::__construct();
-		// model
-		 $this->load->model('m_data_guru');
-		 $this->load->model('login/m_session');
-	}
+    public function __construct()
+    {
+        parent::__construct();
+        // model
+        $this->load->model('m_data_guru');
+    }
 
-	
-	// index
-	function index()
-	{
-		$data = array(
-			'namamodule' 	=> "data_guru",
-			'namafileview' 	=> "V_data_guru",
-			'tampil'		=> $this->m_data_guru->tampil(),
-		);
-		echo Modules::run('template/tampilCore', $data);
-	}
+    // index
+    public function index()
+    {
+        if ($this->session->userdata('login')) {
+            $data = array(
+                'namamodule' => "data_guru",
+                'namafileview' => "V_data_guru",
+                'tampil' => $this->m_data_guru->tampil(),
+            );
+            echo Modules::run('template/tampilCore', $data);
 
-	function tambah_data()
-	{
-		$this->m_data_guru->tambah();
-		redirect('data_guru');
-	}
+        } else {
+            redirect('login');
+        }
+    }
 
-	function hapus($id)
-	{
-		$this->m_data_guru->hapus($id);
-		redirect('data_guru');
-	}
+    public function tambah_data()
+    {
+        $this->m_data_guru->tambah();
+        redirect('data_guru');
+    }
 
-	function edit()
-	{
-		$this->m_data_guru->edit();
-		redirect('data_guru');
-	}
+    public function hapus($id)
+    {
+        $this->m_data_guru->hapus($id);
+        redirect('data_guru');
+    }
+
+    public function edit()
+    {
+        $this->m_data_guru->edit();
+        redirect('data_guru');
+    }
 }
-?>

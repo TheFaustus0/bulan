@@ -1,31 +1,30 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Template extends MX_Controller {
+class Template extends MX_Controller
+{
 
-	function __construct()
-	{
-		parent:: __construct();
-		//load model
+    public function __construct()
+    {
+        parent::__construct();
+        //load model
 
-		$this->load->model('m_template');
-		$this->load->model('login/m_session');
-	}
+        $this->load->model('m_template');
 
-	
+    }
 
-	// view core templating
-	public function index()
-	{
-		
-		$this->load->view('view_template_core');
-	}
+    // view core templating
+    public function index()
+    {
 
-	public function tampilCore($data)
-	{
-		$id = $this->session->userdata('session_id');
-		
-		$this->load->view('view_template_core',$data);
-	}
+        $this->load->view('view_template_core');
+    }
+
+    public function tampilCore($data)
+    {
+        $id = $this->session->userdata('session_id');
+
+        $this->load->view('view_template_core', $data);
+    }
 
 }
