@@ -103,7 +103,7 @@
    <link href="<?php echo base_url(); ?>assets/plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
    <link href="<?php echo base_url(); ?>assets/plugins/datatables/extensions/Responsive/css/responsive.dataTables.min.css" rel="stylesheet">
 
-   
+
 
     <!--=================================================
 
@@ -136,9 +136,9 @@
 <!--TIPS-->
 <!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
 <body>
-    
+
     <div id="container" class="effect aside-float aside-bright mainnav-lg">
-    
+
 
         <!--NAVBAR-->
         <!--===================================================-->
@@ -210,9 +210,9 @@
 
                             <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right panel-default">
                                 <ul class="head-list">
-                                    
+
                                     <li>
-                                        <a href="<?php echo base_url('login/logoutApp') ?>"><i class="demo-pli-unlock icon-lg icon-fw"></i> Logout</a>
+                                        <a href="<?php echo base_url('login/out') ?>"><i class="demo-pli-unlock icon-lg icon-fw"></i> Logout</a>
                                     </li>
                                 </ul>
                             </div>
@@ -244,8 +244,8 @@
                 <div id="page-content">
 
                         <?php
-                                  $this->load->view($namamodule .'/'.$namafileview);
-                                ?>
+$this->load->view($namamodule . '/' . $namafileview);
+?>
 
                 </div>
                 <!--===================================================-->
@@ -457,12 +457,12 @@
                     <div id="mainnav-menu-wrap">
                         <div class="nano">
                             <div class="nano-content">
-                                
+
                                 <!--Profile Widget-->
                                 <!--================================-->
                                 <div id="mainnav-profile" class="mainnav-profile">
-                                    
-                               
+
+
                                      <div class="profile-wrap text-center">
                                         <div class="pad-btm">
                                             <img class="img-circle img-md" src="<?php echo base_url(); ?>assets/img/dawet.jpg" alt="Profile Picture">
@@ -475,10 +475,10 @@
                                             <span class="mnp-desc">Juragan Getuk Lindri</span>
                                         </a>
                                     </div>
-                               
-                               
+
+
                                     <div id="profile-nav" class="collapse list-group bg-trans">
-                                        
+
                                         <a href="<?php echo base_url('login/logoutApp'); ?>" class="list-group-item">
                                             <i class="demo-pli-unlock icon-lg icon-fw"></i> Logout
                                         </a>
@@ -523,12 +523,12 @@
                                 <!--================================-->
                                 <!--End shortcut buttons-->
 
-                                
 
-                                 
+
+
                                 <ul id="mainnav-menu" class="list-group">
-              
-                                    <?php if($this->uri->segment('1') == 'data_sekolah'){ ?>
+
+                                    <?php if ($this->uri->segment('1') == 'data_sekolah') {?>
                                     <li class="active-sub">
                                         <a href="<?php echo base_url('data_sekolah'); ?>">
                                             <i class="fa fa-list"></i>
@@ -539,7 +539,7 @@
                                         <!--Submenu-->
 
                                     </li>
-                                    <?php } else{ ?>
+                                    <?php } else {?>
                                         <li>
                                         <a href="<?php echo base_url('data_sekolah'); ?>">
                                             <i class="fa fa-list"></i>
@@ -550,15 +550,15 @@
                                         <!--Submenu-->
 
                                     </li>
-                                    <?php } ?>
+                                    <?php }?>
 
-                              
+
                                     </ul>
 
 
                                 <ul id="mainnav-menu" class="list-group">
-              
-                                    <?php if($this->uri->segment('1') == 'data_guru'){ ?>
+
+                                    <?php if ($this->uri->segment('1') == 'data_guru') {?>
                                     <li class="active-sub">
                                         <a href="<?php echo base_url('data_guru'); ?>">
                                             <i class="fa fa-list"></i>
@@ -569,7 +569,7 @@
                                         <!--Submenu-->
 
                                     </li>
-                                    <?php } else{ ?>
+                                    <?php } else {?>
                                         <li>
                                         <a href="<?php echo base_url('data_guru'); ?>">
                                             <i class="fa fa-list"></i>
@@ -580,12 +580,12 @@
                                         <!--Submenu-->
 
                                     </li>
-                                    <?php } ?>
+                                    <?php }?>
 
-                              
+
                                     </ul>
-                                
-                                
+
+
 
                                 <!--Widget-->
                                 <!--================================-->
