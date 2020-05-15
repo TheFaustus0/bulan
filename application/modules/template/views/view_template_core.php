@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Hummagang</title>
+    <title>Bayar Wi-Fi</title>
 
 
     <!--STYLESHEET-->
@@ -20,6 +20,7 @@
 
 
     <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link rel="shortcut icon" href="assets/img/dawet.jpg" type="image/x-icon">
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -150,7 +151,7 @@
                     <a href="index.html" class="navbar-brand">
                         <img src="<?php echo base_url(); ?>assets/login/pages/img/login/logo7.png" alt="Nifty Logo" class="brand-icon">
                         <div class="brand-title">
-                            <span class="brand-text">Mobel Lejen</span>
+                            <span class="brand-text">Gethuk Lindri</span>
                         </div>
                     </a>
                 </div>
@@ -464,14 +465,14 @@
                                
                                      <div class="profile-wrap text-center">
                                         <div class="pad-btm">
-                                            <img class="img-circle img-md" src="<?php echo base_url(); ?>assets/img/1.jpeg" alt="Profile Picture">
+                                            <img class="img-circle img-md" src="<?php echo base_url(); ?>assets/img/dawet.jpg" alt="Profile Picture">
                                         </div>
                                         <a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
                                             <span class="pull-right dropdown-toggle">
                                                 <i class="dropdown-caret"></i>
                                             </span>
-                                            <p class="mnp-name">Galih Titis B.C</p>
-                                            <span class="mnp-desc">somaddddddddddddd@gmail.com</span>
+                                            <p class="mnp-name">Admin</p>
+                                            <span class="mnp-desc">Juragan Getuk Lindri</span>
                                         </a>
                                     </div>
                                
@@ -542,7 +543,7 @@
                                         <li>
                                         <a href="<?php echo base_url('data_sekolah'); ?>">
                                             <i class="fa fa-list"></i>
-                                            <span class="menu-title">Data Sekolah</span>
+                                            <span class="menu-title">Data Pelanggan</span>
                                             <i class="arrow"></i>
                                         </a>
 
@@ -561,7 +562,7 @@
                                     <li class="active-sub">
                                         <a href="<?php echo base_url('data_guru'); ?>">
                                             <i class="fa fa-list"></i>
-                                            <span class="menu-title">Data Guru</span>
+                                            <span class="menu-title">Data Pembayaran</span>
                                             <i class="arrow"></i>
                                         </a>
 
@@ -572,7 +573,7 @@
                                         <li>
                                         <a href="<?php echo base_url('data_guru'); ?>">
                                             <i class="fa fa-list"></i>
-                                            <span class="menu-title">Data Guru</span>
+                                            <span class="menu-title">Data Pembayaran</span>
                                             <i class="arrow"></i>
                                         </a>
 
@@ -622,7 +623,7 @@
             <!-- Visible when footer positions are static -->
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
             <div class="hide-fixed pull-right pad-rgt">
-               Hummasoft Technologhy
+               Al - Azhar Computer Solution
             </div>
 
 
@@ -631,7 +632,7 @@
             <!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-            <p class="pad-lft">&#0169; 2019 HummaPOS</p>
+            <p class="pad-lft">&#0169; 2020 ACS</p>
 
 
 
