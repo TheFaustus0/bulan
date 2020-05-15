@@ -47,18 +47,14 @@
                 </div>
                 <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
                     <div class="col-md-12">
-                        <img class="login-logo" src="<?php echo base_url(); ?>assets/login/pages/img/login/magang1.png" style="width:200px"/> 
+                        <img class="login-logo" src="<?php echo base_url(); ?>assets/login/pages/img/login/magang1.png" style="width:200px"/>
                     </div>
                     <div class="login-content">
                         <h1>CORE Hummasoft </h1>
                         <p> Selamat datang di Hummasoft , silahkan login terlebih dahulu sebelum melanjutkan ke halaman dasboard . </p>
-                        <?php if($cekAdmin){ 
-                        
-                     }
-                    else{ ?>
-                        <p>Belum Punya Akun? <a href="<?php echo base_url('register')?>" class="btn-link mar-rgt text-bold">Daftar</a></p>
-                   <?php } ?>
-                        <form action="<?php echo base_url('login/proses_login' ) ?>" class="login-form" method="post">
+
+<?=$this->session->flashdata('message')?>
+                        <form action="<?php echo base_url('login/auth') ?>" class="login-form" method="post">
                             <div class="alert alert-danger display-hide">
                                 <button class="close" data-close="alert"></button>
                                 <span>Harap masukan Username dan Password. </span>
@@ -66,18 +62,15 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Masukan Username" name="username" required/> </div>
+                                    <input class="form-control form-control-solid placeholder-no-fix form-group" name="username" autofocus type="text" autocomplete="off" placeholder="Masukan Username" value="<?=set_value('username')?>"  required/> </div>
                                 <div class="col-xs-6">
-                                    <input class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeholder="Masukan Password" name="password" required/> </div>
+                                    <input class="form-control form-control-solid placeholder-no-fix form-group"  name="password" type="password" autocomplete="off" placeholder="Masukan Password" required/> </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-4">
-                                    
+
                                 </div>
                                 <div class="col-sm-8 text-right">
-                                    <div class="forgot-password">
-                                        <a href="javascript:;" id="forget-password" class="forget-password">Lupa Password?</a>
-                                    </div>
                                     <button class="btn green" type="submit">Masuk</button>
                                 </div>
                             </div>
@@ -88,13 +81,13 @@
                             <p id="pemberitahuan"> Masukkan data anda. </p>
                              <p id="pemberitahuan2"> Anda Bukan Direktur / Admin Perusahaan. </p>
                             <div class="form-group">
-                                <input class="form-control placeholder-no-fix form-group" id="username" type="text" autocomplete="off" placeholder="Username" name="username" /> 
+                                <input class="form-control placeholder-no-fix form-group" id="username" type="text" autocomplete="off" placeholder="Username" name="username" />
                             </div>
                             <div class="form-group">
-                                <input class="form-control placeholder-no-fix form-group" id="email" type="text" autocomplete="off" placeholder="Email" name="email" /> 
+                                <input class="form-control placeholder-no-fix form-group" id="email" type="text" autocomplete="off" placeholder="Email" name="email" />
                             </div>
                             <div class="form-group">
-                                <input class="form-control placeholder-no-fix form-group" id="no_telp" type="text" autocomplete="off" placeholder="No Telepon" name="no_telp" /> 
+                                <input class="form-control placeholder-no-fix form-group" id="no_telp" type="text" autocomplete="off" placeholder="No Telepon" name="no_telp" />
                             </div>
                             <div class="form-actions">
                                 <button type="button" id="back-btn" class="btn green btn-outline">Back</button>
@@ -109,13 +102,13 @@
                             <p id="pemberitahuan3"> Masukkan password baru. </p>
                             <p id="pemberitahuan4"> Password tidak sesuai. </p>
                             <div class="form-group">
-                                <input class="form-control placeholder-no-fix form-group" name="id" id="idUser"  type="hidden" autocomplete="off" /> 
-                                <input class="form-control placeholder-no-fix form-group" id="passwordBaru" type="password" autocomplete="off" placeholder="Password" name="password" /> 
+                                <input class="form-control placeholder-no-fix form-group" name="id" id="idUser"  type="hidden" autocomplete="off" />
+                                <input class="form-control placeholder-no-fix form-group" id="passwordBaru" type="password" autocomplete="off" placeholder="Password" name="password" />
                             </div>
                             <div class="form-group">
-                                <input class="form-control placeholder-no-fix form-group" id="passwordKonf"  type="password" autocomplete="off" placeholder="Konfirmasi Password" name="konf_password" /> 
+                                <input class="form-control placeholder-no-fix form-group" id="passwordKonf"  type="password" autocomplete="off" placeholder="Konfirmasi Password" name="konf_password" />
                             </div>
-                           
+
                             <div class="form-actions">
                                 <button type="button" id="back-btn2" class="btn green btn-outline">Back</button>
                                 <button type="submit" class="btn btn-success uppercase pull-right" id="submit2">Submit</button>
@@ -124,7 +117,7 @@
                         <!-- END NEW PASSWORD -->
 
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -276,7 +269,7 @@
             var username = $('#username').val();
             var email    = $('#email').val();
             var no_telp  = $('#no_telp').val();
-            
+
 
             $.ajax({
                 type        : 'POST',
@@ -305,7 +298,7 @@
             var konf_password   = $('#passwordKonf').val();
             var id              = $('#idUser').val();
            // alert(id);
-                
+
             if(password == konf_password){
 
                 $.ajax({
@@ -323,8 +316,8 @@
                 $('#pemberitahuan3').hide();
                 $('#pemberitahuan4').show();
             }
-            
-            
+
+
         });
 
         jQuery(document).ready(function() {
