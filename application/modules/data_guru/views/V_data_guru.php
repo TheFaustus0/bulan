@@ -2,11 +2,11 @@
 	  	<div class="panel">
 	  		<div class="panel-heading">
 	  			<center>
-	  				<h3 class="panel-title">DATA GURU</h3>
+	  				<h3 class="panel-title">DATA Pembayaran Wi-Fi</h3>
 	  			</center>
 	  		</div>
-	  		<center><button data-target="#tambah" data-toggle="modal" class="btn btn-success"><span class="fa 	fa-plus"></span>
-	  				Tambah</button></center>
+	  		<!-- <center><button data-target="#tambah" data-toggle="modal" class="btn btn-success"><span class="fa 	fa-plus"></span>
+	  				</button></center> -->
 
 
 	  		<!--Bordered Table-->
@@ -17,10 +17,10 @@
 	  					<thead>
 	  						<tr>
 	  							<th class="text-center">NO</th>
-	  							<th class="text-center">NIK</th>
+	  							
 	  							<th class="text-center">NAMA</th>
-	  							<th class="text-center">ALAMAT</th>
-	  							<th>JURUSAN</th>
+	  						<!-- 	<th class="text-center">ALAMAT</th>
+	  							<th>JURUSAN</th> -->
 	  							<th class="text-center">ACTION</th>
 	  						</tr>
 	  					</thead>
@@ -31,10 +31,9 @@
 							?>
 	  						<tr>
 	  							<td><?php echo $no++; ?></td>
-	  							<td><?php echo $u->nis ?></td>
+	  							
 	  							<td><?php echo $u->nama ?></td>
-	  							<td><?php echo $u->alamat ?></td>
-	  							<td><?php echo $u->jurusan ?></td>
+	  							
 	  							<td>
 	  								<a data-toggle="modal" data-target="#edit<?php echo $u->id ?>" class="btn btn-warning btn-icon"><i class="demo-psi-pen-5 icon-lg">Edit</i></a>
 
