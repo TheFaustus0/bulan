@@ -97,15 +97,15 @@
                                     <div class="panel-body">
                                         
                                         <div class="col-md-6">
-                                            <label for="" class="control-label">Nama Sekolah</label>
+                                            <label for="" class="control-label">Nama Pelanggan</label>
                                             <input type="text" name="nama_sekolah" placeholder="Nama Sekolah" class="form-control" value="<?= $res->nama_sekolah ?>">
                                         </div>
                                          <div class="col-md-6" >
-                                            <label for="" class="control-label">Logo</label>
+                                            <label for="" class="control-label">Gambar</label>
                                             <input type="file" name="gambar" placeholder="Logo Sekolah" class="form-control" id="userfile" onchange="tampilkanPreview(this,'preview')">
                                         </div>
                                          <div class="col-md-6" style="margin-top: 2%">
-                                            <label for="" class="control-label">Keterangan</label>
+                                            <label for="" class="control-label">Alamat</label>
                                             <textarea type="text" name="keterangan" rows="5" placeholder="Keterangan" class="form-control"><?= $res->keterangan ?></textarea>
                                         </div>
                                         <div class="col-md-6 " style="margin-top: 2%">
@@ -146,14 +146,14 @@
                     
                                     <div class="panel-body">
                                         <div class="col-lg-4">
-                                            <label for="" class="control-label">Nama Sekolah :</label>
+                                            <label for="" class="control-label">Nama Pelanggan :</label>
                                         </div>
                                         <div class="col-md-8">
                                             
                                             <input type="text" disabled="disabled" name="nama_sekolah" placeholder="Nama Sekolah" class="form-control" value="<?= $res->nama_sekolah ?>">
                                         </div>
                                         <div class="col-lg-4" style="margin-top: 2%">
-                                            <label for="" class="control-label">Keterangan :</label>
+                                            <label for="" class="control-label">Alamat :</label>
                                         </div>
                                          <div class="col-md-8" style="margin-top: 2%">
                                             
@@ -206,7 +206,7 @@
                 <!--Modal footer-->
                 <div class="modal-footer">
                     <button data-dismiss="modal" class="btn btn-default" type="button">Batal</button>
-                    <a class="btn btn-danger" href="<?php echo base_url('data_sekolah/hapus/'. $res->id_sekolah) ?>">Hapus Sekolah</a>
+                    <a class="btn btn-danger" href="<?php echo base_url('data_sekolah/hapus/'. $res->id_sekolah) ?>">Blokir Pelanggan</a>
                 </div>
             </div>
         </div>
@@ -234,15 +234,15 @@
                                     <div class="panel-body">
                                         
                                         <div class="col-md-6">
-                                            <label for="" class="control-label">Nama Sekolah</label>
+                                            <label for="" class="control-label">Nama Pelanggan</label>
                                             <input type="text" name="nama_sekolah" placeholder="Nama Sekolah" class="form-control">
                                         </div>
                                          <div class="col-md-6" >
-                                            <label for="" class="control-label">Logo</label>
+                                            <label for="" class="control-label">Foto</label>
                                             <input type="file" name="gambar" placeholder="Logo Sekolah" class="form-control" id="userfile" onchange="tampilkanPreview(this,'preview')">
                                         </div>
                                          <div class="col-md-6" style="margin-top: 2%">
-                                            <label for="" class="control-label">Keterangan</label>
+                                            <label for="" class="control-label">Alamat</label>
                                             <textarea type="text" name="keterangan" rows="5" placeholder="Keterangan" class="form-control"></textarea>
                                         </div>
                                         <div class="col-md-6 " style="margin-top: 2%">
